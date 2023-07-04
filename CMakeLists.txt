@@ -10,11 +10,14 @@ else()
 file(GLOB_RECURSE SOURCE
   "${serializer_SOURCE_DIR}/include/*.hpp"
 )
+endif()
 
 add_library(serializer ${SOURCE})
 set_target_properties(serializer PROPERTIES LINKER_LANGUAGE CXX)
 
 if (${BUILD_SERIALIZER_EXAMPLE})
+if (TARGET serializer_example)
+else()
 add_executable(serializer_example
   ${serializer_SOURCE_DIR}/example.cpp
 )
