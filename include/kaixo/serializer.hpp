@@ -53,10 +53,6 @@ namespace kaixo {
         using const_reference = const std::uint8_t&;
         using pointer = std::allocator_traits<Allocator>::pointer;
         using const_pointer = std::allocator_traits<Allocator>::const_pointer;
-        using iterator = const_pointer;
-        using const_iterator = const_pointer;
-        using reverse_iterator = std::reverse_iterator<iterator>;
-        using const_reverse_iterator = std::reverse_iterator<const_iterator>;
 
         // =======================================================
 
